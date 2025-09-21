@@ -1,0 +1,125 @@
+<section class="contact-section">
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="contact-hero">
+            <h1 class="contact-title">Kapcsolat</h1>
+            <p class="contact-subtitle">Látogasson el Pékségünkbe - Jöjjön és kóstolja meg a különbséget, amit a friss, Kézműves sütés jelent</p>
+        </div>
+        
+        <div class="contact-grid">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="images/location.jpg" alt="Location" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <h3 class="contact-card-title">Helyszín</h3>
+                    <p class="contact-detail">
+                        Kézműves Kenyér utca 123<br>
+                        Pékek Negyede, Budapest 1025<br>
+                        Magyarország
+                    </p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="images/phone.jpg" alt="Phone" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <h3 class="contact-card-title">Telefon</h3>
+                    <p class="contact-detail">
+                        <a href="tel:+36301234567">+36 30 123 4567</a><br>
+                        <small>Hívjon egyedi rendelésekért</small>
+                    </p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="images/email.jpg" alt="Email" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <h3 class="contact-card-title">E-mail</h3>
+                    <p class="contact-detail">
+                        <a href="mailto:hello@crustydelights.hu">hello@crustydelights.hu</a><br>
+                        <small>24 órán belül válaszolunk</small>
+                    </p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <img src="images/opening-hours.jpg" alt="Opening hours clock" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <h3 class="contact-card-title">Nyitvatartás</h3>
+                    <p class="contact-detail">
+                        <strong>Hétfő - Péntek:</strong> 6:00 - 19:00<br>
+                        <strong>Szombat:</strong> 7:00 - 20:00<br>
+                        <strong>Vasárnap:</strong> 8:00 - 18:00<br>
+                        <small style="color: var(--primary-brown);">Friss kenyér egész nap kapható!</small>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Google Maps -->
+            <div class="map-container">
+                <h3 class="map-title">Találjon meg minket a térképen</h3>
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-73.968285!3d40.7589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f07d5da561%3A0x61f6aa1152c4fc6a!2s123%20W%2079th%20St%2C%20New%20York%2C%20NY%2010024!5e0!3m2!1sen!2sus!4v1695123456789!5m2!1sen!2sus"
+                        width="100%" 
+                        height="400" 
+                        style="border:0; border-radius: 12px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p class="map-description">
+                    Budapest szívében található pékségünk könnyen megközelíthető metróval, busszal vagy autóval. 
+                    Utcai parkolás lehetséges, és mindössze 2 perces sétára vagyunk a 79. utcai metróállomástól.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="contact-form-section">
+            <h3 class="contact-form-title">Írjon nekünk</h3>
+            <p class="contact-form-subtitle">Kérdései vannak termékeinkkel kapcsolatban, vagy egyedi rendelést szeretne leadni? Szívesen hallunk Öntől!</p>
+            
+            <form class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Az Ön neve *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail cím *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Telefonszám</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Tárgy *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Válasszon témát...</option>
+                            <option value="general">Általános érdeklődés</option>
+                            <option value="custom-order">Egyedi rendelés</option>
+                            <option value="catering">Vendéglátási kérés</option>
+                            <option value="feedback">Visszajelzés</option>
+                            <option value="wholesale">Nagykereskedelmi érdeklődés</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Üzenet *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Mesélje el érdeklődését, egyedi rendelés részleteit, vagy bármilyen kérdését..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-large">Üzenet küldése</button>
+            </form>
+        </div>
+    </div>
+</section>
