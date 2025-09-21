@@ -1,34 +1,11 @@
 # Crusty Delights Pékség Website - Optimized Structure
 
-This project features a clean, modular architecture with consolidated components and optimized performance.
-
-## File Structure
-
-```
-bakery-webpage/
-├── index.html              # Main landing page
-├── about.html              # About page
-├── products.html           # Products showcase
-├── contact.html            # Contact page with Google Maps
-├── events.html             # Events and workshops
-├── styles.css              # All CSS styles (with utility classes)
-├── script.js               # Unified JavaScript functionality
-├── component-loader.js     # Universal component loading system
-├── navigation.js           # Navigation helper
-└── components/
-    ├── header.html         # Header navigation
-    ├── hero.html           # Hero section
-    ├── features.html       # Bakery specialties
-    ├── about.html          # About section content
-    ├── products.html       # Product categories and listings
-    ├── contact.html        # Contact section with map
-    ├── events.html         # Events and workshops content
-    └── footer.html         # Footer section
-```
+This project features the source code for a university project task. The webpage is about a finctional bakery.
 
 ## How It Works
 
 ### Unified Component System
+
 - **Clean Structure**: All HTML files use consistent structure with placeholder divs
 - **Dynamic Loading**: Single component loader handles all pages automatically
 - **Auto-Detection**: Component loader automatically detects which components to load
@@ -36,12 +13,15 @@ bakery-webpage/
 - **Easy Maintenance**: Each section can be edited independently
 
 ### Component Loading System
+
 The `component-loader.js` file:
+
 1. Fetches each HTML component from the `/components/` directory
 2. Injects them into their respective placeholder divs
 3. Initializes all interactive features after loading
 
 ### Benefits
+
 - **Modularity**: Each component can be developed and maintained separately
 - **Reusability**: Components can be easily reused across different pages
 - **Performance**: Components can be cached and loaded on demand
@@ -49,18 +29,46 @@ The `component-loader.js` file:
 
 ## Usage
 
-### To view the modular version:
-1. Open `index.html` in your browser
-2. The component loader will automatically fetch and display all components
+### Running Locally with Python Web Server
+
+The website uses dynamic component loading which requires running on a web server (not just opening files directly). Here's how to run it locally:
+
+#### Python 3.x (Recommended)
+
+```bash
+# Navigate to the project directory
+cd bakery-webpage
+
+# Start the web server on port 8000
+python -m http.server 8000
+
+# Or use a custom port (e.g., 8008)
+python -m http.server 8008
+```
+
+#### Accessing the Website
+
+After starting the server, open your browser and go to:
+
+- `http://localhost:8000` (or your chosen port)
+- Navigate to different pages:
+
+#### Why a Web Server is Required
+
+- The component loader uses the Fetch API to dynamically load HTML components
+- Modern browsers block fetch requests to `file://` URLs for security reasons
+- A local web server serves files over `http://` which allows the components to load properly
 
 ### To edit a specific section:
+
 - Edit the corresponding file in the `components/` folder
 - Changes will be reflected when you refresh the page
 
 ### To add new components:
+
 1. Create a new HTML file in the `components/` folder
-2. Add a placeholder div in `index.html`
-3. Update the `component-loader.js` to include the new component
+2. Add a placeholder div in the appropriate page
+3. The component loader will automatically detect and load the new component
 
 ## Files Explanation
 
@@ -68,12 +76,3 @@ The `component-loader.js` file:
 - **script.js**: Main functionality including smooth scrolling, animations, and interactivity
 - **component-loader.js**: Handles dynamic loading of HTML components
 - **components/*.html**: Individual HTML components for each section
-
-## Browser Compatibility
-
-The modular version uses modern JavaScript features:
-- Fetch API for loading components
-- Async/await for component loading
-- IntersectionObserver for scroll animations
-
-Supported browsers: Chrome 55+, Firefox 52+, Safari 10.1+, Edge 14+
